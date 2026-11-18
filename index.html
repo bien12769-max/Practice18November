@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR Geometry</title>
+
+    <title>AR Geometry — Изучение геометрии</title>
+
     <link rel="stylesheet" href="style.css">
 
-    <!-- Единое подключение Three.js -->
     <script type="importmap">
     {
         "imports": {
@@ -26,37 +27,36 @@
 </header>
 
 <main>
+
     <section class="viewer">
-        <h2>3D-модель</h2>
+        <h2>Трёхмерная модель</h2>
 
         <div id="scene"></div>
 
         <button id="resetView">Сбросить положение</button>
 
         <p class="hint">
-            Вращение: зажмите левую кнопку мыши.
+            Вращение: зажмите левую кнопку мыши
+            и перемещайте курсор.
             Масштабирование: колёсико мыши.
-            На телефоне: касания и движение пальцами.
+            На телефоне используйте касания.
         </p>
 
-        <h2>Дополненная реальность</h2>
-
-        <button id="arButton">Запустить AR</button>
-
-        <p id="arStatus">
-            Проверка поддержки AR...
-        </p>
+        <a href="ar.html" class="ar-link">
+            <span>Запустить дополненную реальность (AR)</span>
+        </a>
     </section>
 
     <section class="controls">
-        <h2>Выбор фигуры</h2>
+
+        <h2>Выбор геометрической фигуры</h2>
 
         <select id="shape">
             <option value="cube">Куб</option>
             <option value="sphere">Шар</option>
             <option value="cylinder">Цилиндр</option>
             <option value="cone">Конус</option>
-            <option value="pyramid">Пирамида</option>
+            <option value="pyramid">Четырёхугольная пирамида</option>
         </select>
 
         <h2>Размеры фигуры</h2>
@@ -72,8 +72,14 @@
             <p>Объём: —</p>
             <p>Площадь поверхности: —</p>
         </div>
+
     </section>
+
 </main>
+
+<footer>
+    <p>AR Geometry © 2026</p>
+</footer>
 
 <script type="module" src="script.js"></script>
 
