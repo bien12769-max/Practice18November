@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Geometry</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Единое подключение Three.js -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h1>AR Geometry</h1>
+    <p>Интерактивное изучение геометрических фигур</p>
+</header>
+
+<main>
+    <section class="viewer">
+        <h2>3D-модель</h2>
+
+        <div id="scene"></div>
+
+        <button id="resetView">Сбросить положение</button>
+
+        <p class="hint">
+            Вращение: зажмите левую кнопку мыши.
+            Масштабирование: колёсико мыши.
+            На телефоне: касания и движение пальцами.
+        </p>
+
+        <h2>Дополненная реальность</h2>
+
+        <button id="arButton">Запустить AR</button>
+
+        <p id="arStatus">
+            Проверка поддержки AR...
+        </p>
+    </section>
+
+    <section class="controls">
+        <h2>Выбор фигуры</h2>
+
+        <select id="shape">
+            <option value="cube">Куб</option>
+            <option value="sphere">Шар</option>
+            <option value="cylinder">Цилиндр</option>
+            <option value="cone">Конус</option>
+            <option value="pyramid">Пирамида</option>
+        </select>
+
+        <h2>Размеры фигуры</h2>
+
+        <div id="parameters"></div>
+
+        <button id="calculate">
+            Рассчитать параметры
+        </button>
+
+        <div id="results">
+            <h3>Результаты вычислений</h3>
+            <p>Объём: —</p>
+            <p>Площадь поверхности: —</p>
+        </div>
+    </section>
+</main>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
